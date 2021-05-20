@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bangundatarcalc.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="segitiga">
+            <div class="row">
+                <div class="board">
+                    <div class="luasRow">
+                        <p>Hitung Luas :</p>
+                        <input type="number" placeholder="alas" class="parameter" id="alas">
+                        <input type="number" placeholder="tinggi" class="parameter" id="tinggi">
+                        <button class="hitungLuas" id="luasSegitiga">Hitung!</button>
+                    </div>
+                    <div class="kelilingRow">
+                        <p>Hitung Keliling:</p>
+                        <input type="number" class="parameter" name="" id="a" placeholder="a">
+                        <input type="number" class="parameter" name="" id="b" placeholder="b">
+                        <input type="number" class="parameter" name="" id="c" placeholder="c">
+                        <button class="hitungKeliling" id="kelilingSegitiga">Hitung!</button>
+                    </div>
+                </div>
+                <img class="imageMaper" src="./images/segitiga.png" alt="">
+            </div>
+        </div>
+
+        <div class="persegi">
+            <div class="row">
+                <div class="board">
+                    <div class="luasRow">
+                        <p>Hitung Luas :</p>
+                        <input type="number" placeholder="sisi" class="parameter" id="sisi">
+                        <button class="hitungLuas" id="luasPersegi">Hitung!</button>
+                    </div>
+                    <div class="kelilingRow">
+                        <p>Hitung Keliling:</p>
+                        <input type="number" class="parameter" name="" id="sisi" placeholder="sisi">
+                        <button class="hitungKeliling" id="kelilingPersegi">Hitung!</button>
+                    </div>
+                </div>
+                <img class="imageMaper" src="./images/persegi.png" alt="">
+            </div>
+        </div>
+
+        <div class="persegiPanjang">
+            <div class="row">
+                <div class="board">
+                    <div class="luasRow">
+                        <p>Hitung Luas :</p>
+                        <input type="number" placeholder="panjang" class="parameter" id="panjang">
+                        <input type="number" placeholder="lebar" class="parameter" id="lebar">
+                        <button class="hitungLuas" id="luasPP">Hitung!</button>
+                    </div>
+                    <div class="kelilingRow">
+                        <p>Hitung Keliling:</p>
+                        <input type="number" class="parameter" name="" id="panjang" placeholder="panjang">
+                        <input type="number" class="parameter" name="" id="lebar" placeholder="lebar">
+                        <button class="hitungKeliling" id="kelilingPP">Hitung!</button>
+                    </div>
+                </div>
+                <img class="imageMaper" src="./images/persegiPanjang.png" alt="">
+            </div>
+        </div>
+
+        <div class="trapesium">
+            <div class="row">
+                <div class="board">
+                    <div class="luasRow">
+                        <p>Hitung Luas :</p>
+                        <input type="number" placeholder="AB" class="parameter" id="ab">
+                        <input type="number" placeholder="CD" class="parameter" id="cd">
+                        <input type="number" placeholder="Tinggi" class="parameter" id="tinggi">
+                        <button class="hitungLuas" id="luasTrapesium">Hitung!</button>
+                    </div>
+                    <div class="kelilingRow">
+                        <p>Hitung Keliling:</p>
+                        <input type="number" class="parameter" id="ab" placeholder="AB">
+                        <input type="number" class="parameter" id="bc" placeholder="BC">
+                        <input type="number" class="parameter" id="cd" placeholder="CD">
+                        <input type="number" class="parameter" id="da" placeholder="DA">
+                        <button class="hitungKeliling" id="kelilingTrapesium">Hitung!</button>
+                    </div>
+                </div>
+                <img class="imageMaper" src="./images/trapesium.png" alt="">
+            </div>
+        </div>
+
+        <div class="lingkaran">
+            <div class="row">
+                <div class="board">
+                    <div class="luasRow">
+                        <p>Hitung Luas :</p>
+                        <input type="number" placeholder="sisi" class="parameter" id="r">
+                        <button class="hitungLuas" id="luasLingkaran">Hitung!</button>
+                    </div>
+                    <div class="kelilingRow">
+                        <p>Hitung Keliling:</p>
+                        <input type="number" class="parameter" name="" id="d" placeholder="Diameter">
+                        <button class="hitungKeliling" id="kelilingLingkaran">Hitung!</button>
+                    </div>
+                </div>
+                <img class="imageMaper" src="./images/lingkaran.png" alt="">
+            </div>
+        </div>
+
+        <button class="bentuk" id="segitigaButton">Segitiga</button>
+        <button class="bentuk" id="persegiButton">Persegi</button>
+        <button class="bentuk" id="persegiPanjangButton">Persegi Panjang</button>
+        <button class="bentuk" id="trapesiumButton">Trapesium</button>
+        <button class="bentuk" id="lingkaranButton">Lingkaran</button>
+
+        <div class="luasDisplay">
+            <h2>Luas : <span class="luasAnswer"></span></h2>
+        </div>
+
+        <div class="kelilingDisplay">
+            <h2>Keliling : <span class="kelilingAnswer"></span></h2>
+        </div>
+    </div>
+    <script src="javaScript/bangundatartor.js"></script>
+</body>
+
+</html>

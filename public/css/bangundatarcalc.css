@@ -1,0 +1,15 @@
+img {
+    width: 15%;
+    padding: 30px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    background-color: gainsboro;
+    padding: 10px;
+}
+

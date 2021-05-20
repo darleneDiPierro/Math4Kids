@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">Enter your name below to save your score!</h2>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)"
+                    disabled>Save</button>
+            </form>
+            <a href="/kabataku" class="btn">Play Again</a>
+            <a href="/bangundatar" class="btn">Bangun Datar</a>
+            <a href="/wtf" class="btn">Go Home</a>
+        </div>
+    </div>
+    <script>
+        const username = document.querySelector('#username')
+        const saveScoreBtn = document.querySelector('#saveScoreBtn')
+        const finalScore = document.querySelector('#finalScore')
+        const mostRecentScore = localStorage.getItem('mostRecentScore')
+
+        const highScores = JSON.parse(localStorage.getItem('highScores')) || []
+
+        const MAX_HIGH_SCORES = 5
+
+        finalScore.innerText = mostRecentScore
+
+        username.addEventListener('keyup', () => {
+            saveScoreBtn.disabled = !username.value
+        })
+
+        saveHighScore = e => {
+            e.preventDefault()
+
+            let score = {
+                score: mostRecentScore,
+                name: username.value
+            }
+
+            highScores.push(score)
+
+            highScores.sort((a, b) => {
+                return b.score - a.score
+            })
+
+            highScores.splice(5)
+
+            localStorage.setItem('highScores', JSON.stringify(highScores))
+            return window.location.assign('/wtf')
+
+
+        }
+    </script>
+</body>
+
+</html>
